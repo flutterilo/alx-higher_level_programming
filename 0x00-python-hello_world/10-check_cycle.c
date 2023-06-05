@@ -9,22 +9,17 @@
 int check_cycle(listint_t *list)
 {
 
-	listint_t *n_check;
-	listint_t *p_check;
+	listint_t *p_check = list;
+	listint_t *n_check = list;
 
 	if (!list)
 		return (0);
-	p_check = list;
-	while (p_check->next)
+	while (p_check && n_check && n_check->next)
 	{
-		n_check = p_check->next;
-		while (n_check->next)
-		{
-			if (n_check == p_check)
-				return (1);
-			n_check = n_check->next;
-		}
 		p_check = p_check->next;
+		n_check = n_check->next->next;
+		if (p_check == n_check)
+			return (1);
 	}
 	return (0);
 }
