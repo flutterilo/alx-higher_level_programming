@@ -2,10 +2,10 @@
 import random
 number = random.randint(-10000, 10000)
 sign = 1
+
 if (number < 0):
     number = number * -1
     sign = -1
-    print("where are inside")
 
 last_digit = (number % 10) * sign
 if last_digit > 5:
