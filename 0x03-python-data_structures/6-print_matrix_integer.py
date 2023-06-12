@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
+    if matrix == [[]]:
+        print("")
+        return
     if isinstance(matrix, list):
         for row in matrix:
             if isinstance(row, list):
