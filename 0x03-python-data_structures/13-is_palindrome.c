@@ -13,6 +13,8 @@ int is_palindrome(listint_t **head)
 	listint_t *tmp_rev;
 
 	tmp = *head;
+	if (tmp == NULL || tmp->next == NULL)
+		return (1);
 	rev_list = reverse_list(tmp);
 	tmp_rev = rev_list;
 	tmp = *head;
