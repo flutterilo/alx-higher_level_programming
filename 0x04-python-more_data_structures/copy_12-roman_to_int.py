@@ -11,6 +11,7 @@ def roman_to_int(roman_string):
             return (0)
         if (i != (len(roman_string) - 1) and
                 roman[roman_string[i]] < roman[roman_string[i + 1]]):
+            print("index i and i + 1 is", roman_string[i], roman_string[i + 1])
             integer += roman[roman_string[i]] * -1
         else:
             integer += roman[roman_string[i]]
