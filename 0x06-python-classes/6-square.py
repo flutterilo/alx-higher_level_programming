@@ -12,6 +12,7 @@ class Square:
         self.position = position
 
     def area(self):
+        """Returns area of a square"""
         return self.__size ** 2
 
     @property
@@ -43,7 +44,11 @@ class Square:
             self.__position = position
 
     def my_print(self):
-        if self.__position[1] > 0:
-            print(("\n"*self.__position[1])[:-1])
-        print(((" "*self.__position[0] + "#"*self.__size + "\n") *
+        """Prints the square using # character"""
+        if self.__size == 0:
+            print("")
+        else:
+            if self.__position[1] > 0:
+                print(("\n"*self.__position[1])[:-1])
+            print(((" "*self.__position[0] + "#"*self.__size + "\n") *
                   self.__size)[:-1])
