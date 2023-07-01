@@ -1,0 +1,95 @@
+# 2-matrix_divided.txt
+
+===============================
+how to use 2-matrix_divided.txt
+===============================
+
+this library will contain all scenarios of tests
+
+check the arguements
+====================
+
+my function should have in first argument a list of integers or float and second must be a number(integer or float)
+
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+	>>> matrix = [[1, 2, 3], [4, 5, 6]]
+	>>> matrix_divided(matrix, 3)
+	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+case 2
+======
+
+	>>> matrix = [[1, 2, 3], [4, 5, 6]]
+	>>> matrix_divided(matrix, 3.0)
+	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+case 3
+======
+
+	>>> matrix = [[6.0, 10.0, 8.0], [4.20, 5.60, 6.34]]
+	>>> matrix_divided(matrix, 2)
+	[[3.0, 5.0, 4.0], [2.1, 2.8, 3.17]]
+
+case 4
+======
+
+	>>> matrix = [[-6.0, 10.0, -8.0], [4.20, -5.60, 6.34]]
+	>>> matrix_divided(matrix, 2)
+	[[-3.0, 5.0, -4.0], [2.1, -2.8, 3.17]]
+
+case 5
+======
+test of first argument as not list of list of integers
+
+	>>> matrix = [-6.0, 10.0, -8.0]
+	>>> matrix_divided(matrix, 2)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+case 6
+======
+test element inside list of list
+
+	>>> matrix = [[6.0, "str", 8.0], ['A', 5.60, 6.34]]
+	>>> matrix_divided(matrix, 2)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+case 7
+======
+check the length of lists
+
+	>>> matrix = [[6.0, 8.0], [4, 5.60, 6.34]]
+	>>> matrix_divided(matrix, 2)
+	Traceback (most recent call last):
+	TypeError: Each row of the matrix must have the same size
+
+case 8
+======
+
+	>>> matrix = [[6.0, 8.0, 33], [4, 5.60, 6.34]]
+	>>> matrix_divided(matrix, "str")
+	Traceback (most recent call last):
+	TypeError: div must be a number
+
+case 9
+======
+
+	>>> matrix = [[6.0, 8.0, 33], [4, 5.60, 6.34]]
+	>>> matrix_divided(matrix, 0)
+	Traceback (most recent call last):
+	ZeroDivisionError: division by zero
+
+case 10
+=======
+
+	>>> matrix = [[]]
+	>>> matrix_divided(matrix, 4)
+	[[]]
+
+case 11
+=======
+
+	>>> matrix = [[6.0, 8.0, 33], [4, 5.60, 6.34], [4, 3, 5.0]]
+	>>> matrix_divided(matrix, 2)
+	[[3.0, 4.0, 16.5], [2.0, 2.8, 3.17], [2.0, 1.5, 2.5]]
