@@ -50,6 +50,8 @@ class Rectangle:
         return (self.__height + self.__width) * 2
 
     def __str__(self):
+        if type(self.print_symbol) != str:
+            self.print_symbol = str(self.print_symbol)
         if self.__width != 0 and self.__height != 0:
             for i in range(self.__height - 1):
                 print(self.print_symbol * self.__width)
