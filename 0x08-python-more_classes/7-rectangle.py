@@ -11,7 +11,6 @@ class Rectangle:
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        global number_of_instances
         self.width = width
         self.height = height
         type(self).number_of_instances += 1
@@ -53,8 +52,8 @@ class Rectangle:
     def __str__(self):
         if self.__width != 0 and self.__height != 0:
             for i in range(self.__height - 1):
-                print(type(self).print_symbol * self.__width)
-            print(type(self).print_symbol * self.__width, end="")
+                print(self.print_symbol * self.__width)
+            print(self.print_symbol * self.__width, end="")
         return ""
 
     def print(self):
