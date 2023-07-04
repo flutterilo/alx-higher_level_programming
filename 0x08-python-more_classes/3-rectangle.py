@@ -49,3 +49,8 @@ class Rectangle:
             for i in range(self.__height):
                 print("#" * self.__width)
         return ""
+
+    def print(self):
+        if self.__width != 0 and self.__height != 0:
+            for i in range(self.__height):
+                print("#" * self.__width)
