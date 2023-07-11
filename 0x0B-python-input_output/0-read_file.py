@@ -12,5 +12,4 @@ def read_file(filename=""):
         filename: name of file
     '''
     with open(filename) as f:
-        for line in f:
-            print(line, end="")
+        print(f.read(), end="")
