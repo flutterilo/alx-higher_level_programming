@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 
-import json
-
 '''
 module call 3-to_json_string
 '''
 
 
+import json
 def to_json_string(my_obj):
     '''
     json represenation of of object
