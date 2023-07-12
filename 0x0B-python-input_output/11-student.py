@@ -25,10 +25,3 @@ class Student:
             return {el: getattr(self, el) for el in attrs if hasattr(self, el)}
         else:
             return self.__dict__
-
-    def reload_from_json(self, json):
-        '''
-        reload from json
-        '''
-        for key, value in json.items():
-            setattr(self, key, value)
