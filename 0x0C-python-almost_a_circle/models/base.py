@@ -49,3 +49,15 @@ class Base:
         else:
             json_list = (json.loads(json_string))
             return json_list
+
+    @classmethod
+    def create(cls, **dictionary):
+        '''Returns an instance by processing a dictionary'''
+        if cls.__name__ == 'Base':
+            return
+        elif cls.__name__ == 'Square':
+            dummy = cls(1)
+        elif cls.__name__ == 'Rectangle':
+            dummy = cls(1, 1)
+        dummy.update(**dictionary)
+        return dummy
