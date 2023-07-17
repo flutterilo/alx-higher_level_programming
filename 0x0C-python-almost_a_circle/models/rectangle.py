@@ -72,3 +72,9 @@ class Rectangle(Base):
         '''Displays the rectangle using # character'''
         print(self.y * '\n', end='')
         print((((self.x * ' ' + self.width * '#') + '\n') * self.height)[:-1])
+
+    def __str__(self):
+        '''Returns a readable representation of the object'''
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.x, self.y,
+                                                       self.width, self.height)
