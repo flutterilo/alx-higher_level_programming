@@ -50,3 +50,8 @@ class Square(Rectangle):
         '''Returns readable representation of object instance'''
         return '[Square] ({}) {}/{} - {}'.format(self.id, self.x, self.y,
                                                  self.size)
+
+    def to_dictionary(self):
+        '''Returns dictionary representation of Square'''
+        dicti = {'id': self.id, 'x': self.x, 'size': self.size, 'y': self.y}
+        return dicti
