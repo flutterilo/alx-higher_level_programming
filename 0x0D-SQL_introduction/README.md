@@ -1,1 +1,1 @@
-this folder will contain sql intrudction tasks changed
+this folder will contain sql intrudction tasks change
