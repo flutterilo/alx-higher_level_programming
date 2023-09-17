@@ -5,5 +5,5 @@ FROM tv_shows AS s
 	ON s.id = sg.show_id
 
 	LEFT JOIN tv_genres as g
-	ON g.id = sg.genre_id
+	ON sg.genre_id = g.id
 ORDER BY s.title, g.name;
