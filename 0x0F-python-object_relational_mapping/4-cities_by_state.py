@@ -18,4 +18,4 @@ if __name__ == "__main__":
     cities = cur.fetchall()
     if cities:
         for city in cities:
-                print(city)
+            print(city)
